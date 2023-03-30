@@ -13,3 +13,4 @@ int no_specifier(char format)
 	_putchar(format);
 	return (2);
 }
+

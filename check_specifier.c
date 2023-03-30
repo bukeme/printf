@@ -24,3 +24,4 @@ int check_specifier(char format, va_list args)
 	}
 	return (no_specifier(format));
 }
+

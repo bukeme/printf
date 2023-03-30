@@ -11,3 +11,4 @@ int print_cent(va_list args)
 {
 	return (_putchar('%'));
 }
+
