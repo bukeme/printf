@@ -28,6 +28,7 @@ int _printf(const char *format, ...)
 		}
 		p++;
 	}
+	va_end(args);
 	return (count);
 }
 
