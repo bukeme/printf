@@ -13,7 +13,7 @@ int check_specifier(char format, va_list args)
 	f c = {'c', print_char};
 	f s = {'s', print_str};
 	f cent = {'%', print_cent};
-	f n = {'\0', (void *)NULL};
+	f n = {'\0', 0};
 	f id_array[4] = {c, s, cent, n};
 	int i;
 
