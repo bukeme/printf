@@ -9,7 +9,7 @@
 void _print_int(int n, int *count)
 {
 	if (n / 10 != 0)
-		_print_int(n / 10);
+		_print_int(n / 10, count);
 	if (n / 10 == 0 && n < 0)
 	{
 		_putchar('-');
@@ -31,5 +31,5 @@ int print_int(va_list *args)
 	int count = 0;
 
 	_print_int(num, &count);
-	return (*count);
+	return (count);
 }
