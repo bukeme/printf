@@ -26,10 +26,11 @@ int print_int(va_list *args)
 	int count = 0;
 
 	_print_int(num);
-	while (num / 10)
+	while (num % 10 || num)
 	{
 		num = num / 10;
 		count++;
 	}
+	printf("%d", count);
 	return (count);
 }
