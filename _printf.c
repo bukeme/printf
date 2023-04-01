@@ -12,9 +12,18 @@ int _printf(const char *format, ...)
 	const char *p = format;
 	va_list args;
 	int count = 0;
+	char *error1 = "Segmentation fault";
 
 	va_start(args, format);
-
+	if (!p)
+	{
+		while (*error1)
+		{
+			_putchar(*error1);
+			error1++;
+		}
+		return (0);
+	}
 	while (*p != '\0')
 	{
 		if (*p == '%')
