@@ -31,6 +31,5 @@ int print_int(va_list *args)
 		num = num / 10;
 		count++;
 	}
-	printf("%d", count);
 	return (count);
 }
