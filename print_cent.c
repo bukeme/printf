@@ -9,6 +9,6 @@
 
 int print_cent(va_list *args)
 {
-	return (_putchar('%'));
+	return (_putchar(va_arg(*args, int)));
 }
 

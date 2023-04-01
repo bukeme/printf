@@ -28,6 +28,7 @@ int print_char(va_list *);
 int print_cent(va_list *);
 int no_specifier(char format);
 int print_int(va_list *);
+int print_bin(va_list *);
 
 #endif
 
