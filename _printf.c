@@ -15,13 +15,14 @@ int _printf(const char *format, ...)
 
 	va_start(args, format);
 
-	while (*p)
+	while (*p != '\0')
 	{
 		if (*p == '%')
 		{
 			p++;
-			if (p)
-				count += check_specifier(*p, &args);
+			if (!(*p))
+				return (0);
+			count += check_specifier(*p, &args);
 		}
 		else
 		{
