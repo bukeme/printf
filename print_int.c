@@ -31,5 +31,5 @@ int print_int(va_list *args)
 	int count = 0;
 
 	_print_int(num, &count);
-	return (count);
+	return (*count);
 }
