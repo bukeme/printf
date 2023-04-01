@@ -3,8 +3,6 @@
 /**
  * _print_int -> prints number and calcuate count
  * @n: number
- * @count: number of digits
- * Return: count
  */
 
 void _print_int(int n)
@@ -28,7 +26,7 @@ int print_int(va_list *args)
 	int count = 0;
 
 	_print_int(num);
-	while(num / 10)
+	while (num / 10)
 	{
 		num = num / 10;
 		count++;
