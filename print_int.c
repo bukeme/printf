@@ -7,14 +7,13 @@
  * Return: count
  */
 
-void _print_int(int n, int *count)
+void _print_int(int n)
 {
 	if (n % 10 != 10)
-		_print_int(n % 10, count);
+		_print_int(n % 10);
 	if (n % 10 == 0 && n < 0)
 		_putchar('-');
 	_putchar(((n < 0) ? n * -1 : n) % 10 + '0');
-	(*count)++;
 }
 
 /**
@@ -27,9 +26,12 @@ int print_int(va_list args)
 {
 	int num = va_arg(args, int);
 	int count = 0;
-	int *cp = &count;
 
-	_print_int(num, cp);
-	_putchar('A');
+	_print_int(num);
+	while(num / 10)
+	{
+		num = num / 10;
+		count++;
+	}
 	return (count);
 }
