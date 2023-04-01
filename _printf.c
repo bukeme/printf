@@ -21,8 +21,9 @@ int _printf(const char *format, ...)
 		{
 			_putchar(*error1);
 			error1++;
+			count++;
 		}
-		return (0);
+		return (count);
 	}
 	while (*p != '\0')
 	{
