@@ -6,9 +6,9 @@
  * Return: count
  */
 
-int print_str(va_list args)
+int print_str(va_list *args)
 {
-	char *s = va_arg(args, char *);
+	char *s = va_arg(*args, char *);
 	int count = 0;
 
 	while (*s)

@@ -20,7 +20,7 @@ int _printf(const char *format, ...)
 		if (*p == '%')
 		{
 			p++;
-			count += check_specifier(*p, args);
+			count += check_specifier(*p, &args);
 		}
 		else
 		{

@@ -17,17 +17,17 @@
 typedef struct func
 {
 	char id;
-	int (*id_func)(va_list);
+	int (*id_func)(va_list *);
 } f;
 
 int _putchar(char c);
 int _printf(const char *format, ...);
-int check_specifier(char format, va_list);
-int print_str(va_list);
-int print_char(va_list);
-int print_cent(va_list);
+int check_specifier(char format, va_list *);
+int print_str(va_list *);
+int print_char(va_list *);
+int print_cent(va_list *);
 int no_specifier(char format);
-int print_int(va_list);
+int print_int(va_list *);
 
 #endif
 

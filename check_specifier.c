@@ -8,7 +8,7 @@
  * Return: count
  */
 
-int check_specifier(char format, va_list args)
+int check_specifier(char format, va_list *args)
 {
 	f c = {'c', print_char};
 	f s = {'s', print_str};

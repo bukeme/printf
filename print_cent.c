@@ -7,7 +7,7 @@
  * Return: 1
  */
 
-int print_cent(va_list args)
+int print_cent(va_list *args)
 {
 	return (_putchar('%'));
 }

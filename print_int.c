@@ -9,8 +9,8 @@
 
 void _print_int(int n)
 {
-	if (n % 10 != 10)
-		_print_int(n % 10);
+	if (n / 10 != 0)
+		_print_int(n / 10);
 	if (n % 10 == 0 && n < 0)
 		_putchar('-');
 	_putchar(((n < 0) ? n * -1 : n) % 10 + '0');
@@ -22,9 +22,9 @@ void _print_int(int n)
  * Return: number of digits
  */
 
-int print_int(va_list args)
+int print_int(va_list *args)
 {
-	int num = va_arg(args, int);
+	int num = va_arg(*args, int);
 	int count = 0;
 
 	_print_int(num);
