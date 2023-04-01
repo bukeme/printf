@@ -15,7 +15,7 @@ void _print_int(int n, int *count)
 		_putchar('-');
 		(*count)++;
 	}
-	_putchar(((n < 0) ? n * -1 : n) % 10 + '0');
+	_putchar(((n < 0) ? (n % 10) * -1 : n % 10) + '0');
 	(*count)++;
 }
 
