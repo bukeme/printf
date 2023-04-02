@@ -6,7 +6,7 @@
  * @count: memory address of number of digits
  */
 
-void _print_bin(int n, int *count)
+void _print_bin(unsigned int n, int *count)
 {
 	int div = n == 1 ? 10 : 2;
 
@@ -24,7 +24,7 @@ void _print_bin(int n, int *count)
 
 int print_bin(va_list *args)
 {
-	int num = va_arg(*args, int);
+	unsigned int num = va_arg(*args, unsigned int);
 	int count = 0;
 
 	if (num == 0)
