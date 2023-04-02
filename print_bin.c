@@ -27,6 +27,11 @@ int print_bin(va_list *args)
 	int num = va_arg(*args, int);
 	int count = 0;
 
+	if (num == 0)
+	{
+		_putchar(0 + '0');
+		return (1);
+	}
 	_print_bin(num, &count);
 	return (count);
 }
