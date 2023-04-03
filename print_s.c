@@ -19,6 +19,8 @@ int print_s_cap(va_list *args)
 		{
 			_putchar('\\');
 			_putchar('x');
+			if (temp > 0 && temp <= 10)
+				_putchar('O');
 			_printf("%x", temp);
 			count = count + 2;
 		}
