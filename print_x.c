@@ -8,9 +8,9 @@
  */
  
 
-void _print_x(int n, xf array[], int *count)
+void _print_x(unsigned int n, xf array[], int *count)
 {
-	int div = 16;
+	unsigned int div = 16;
 	int rmd = n == 10 ? 10 : n % div, j;
 
 	if (n >= 16)
@@ -41,7 +41,8 @@ void _print_x(int n, xf array[], int *count)
 
 int print_x(va_list *args)
 {
-	int num = va_arg(*args, int), count = 0;
+	unsigned int num = va_arg(*args, unsigned int);
+	int count = 0;
 	xf x_array[6];
 
 	xf a = {10, 'A'};
