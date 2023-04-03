@@ -1,21 +1,27 @@
 #include "main.h"
 
+/**
+ * _print_x -> prints hexadecimal of n
+ * @n: number
+ * @array: array
+ * @count: count memory address
+ */
  
 
-int _print_x(int n, xf array, int *count)
+void _print_x(int n, xf array[], int *count)
 {
-	int div = n >= 16 ? 16 : 10;
-	int rmd = n % div, i;
+	int div = 16;
+	int rmd = n == 10 ? 10 : n % div, j;
 
 	if (n >= 16)
 		_print_x(n / 16, array, count);
 	if (rmd >= 10)
 	{
-		for (i = 0; i < 6; i++)
+		for (j = 0; j < 6; j++)
 		{
-			if (x_array[i].i == rmd)
+			if (array[j].i == rmd)
 			{
-				_putchar(x_array[i].c);
+				_putchar(array[j].c);
 				break;
 			}
 		}
@@ -27,9 +33,15 @@ int _print_x(int n, xf array, int *count)
 	(*count)++;
 }
 
+/**
+ * print_x -> calls _print_x function
+ * @args: argumets passed
+ * Return: count of characters printed
+ */
+
 int print_x(va_list *args)
 {
-	int num = va_arg(*args, int);
+	int num = va_arg(*args, int), count = 0;
 	xf x_array[6];
 
 	xf a = {10, 'A'};
@@ -46,6 +58,6 @@ int print_x(va_list *args)
 	x_array[4] = e;
 	x_array[5] = f;
 
-	_print_x(num, array, &count);
+	_print_x(num, x_array, &count);
 	return (count);
 }

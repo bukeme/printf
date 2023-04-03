@@ -15,7 +15,7 @@ void print_n(unsigned int n, int *count)
 }
 
 /**
- * print_unit -> calls print_n function
+ * print_uint -> calls print_n function
  * @args: unsigned int passed
  * Return: number of digits
  */
@@ -26,5 +26,5 @@ int print_uint(va_list *args)
 	int count = 0;
 
 	print_n(num, &count);
-	return(count);
+	return (count);
 }

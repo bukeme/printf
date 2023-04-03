@@ -10,15 +10,18 @@
 int print_s_cap(va_list *args)
 {
 	char *str = va_arg(*args, char *);
-	int count = 0, temp = *str;
+	int count = 0, temp;
 
 	while (*str)
 	{
+		temp = *str;
 		if ((temp > 0 && temp < 32) || (temp >= 127))
 		{
 			_putchar('\\');
 			_putchar('x');
-			_printf("%b", temp);
+			if (temp > 0 && temp <= 11)
+				_putchar(0 + '0');
+			_printf("%x", temp);
 			count = count + 2;
 		}
 		else
@@ -26,6 +29,7 @@ int print_s_cap(va_list *args)
 			_putchar(*str);
 		}
 		count++;
+		str++;
 	}
 	return (count);
 }
