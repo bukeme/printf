@@ -10,14 +10,13 @@
 
 int check_specifier(char format, va_list *args)
 {
-	f c = {'c', print_char};
-	f s = {'s', print_str};
-	f cent = {'%', print_cent};
-	f d = {'d', print_int};
-	f i = {'i', print_int};
-	f b = {'b', print_bin};
+	f c = {'c', print_char}, s = {'s', print_str};
+	f cent = {'%', print_cent}, d = {'d', print_int};
+	f i = {'i', print_int}, b = {'b', print_bin};
+	f u = {'u', print_uint}, o = {'o', print_oct};
+	f x = {'x', print_x}, s_cap = {'S', print_s_cap};
 	f n = {'\0', 0};
-	f id_array[7];
+	f id_array[11];
 	int j;
 
 	id_array[0] = c;
@@ -26,7 +25,11 @@ int check_specifier(char format, va_list *args)
 	id_array[3] = d;
 	id_array[4] = i;
 	id_array[5] = b;
-	id_array[6] = n;
+	id_array[6] = u;
+	id_array[7] = o;
+	id_array[8] = x;
+	id_array[9] = s_cap;
+	id_array[10] = n;
 
 	for (j = 0; id_array[j].id; j++)
 	{
