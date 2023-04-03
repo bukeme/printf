@@ -14,7 +14,10 @@ void _print_x(long int n, xf array[], int *count)
 	int rmd = n == 10 ? 10 : n % div, j;
 
 	if(n < 16 && rmd < 0)
+	{
 		_putchar('-');
+		(*count)++;
+	}
 	rmd = rmd < 0 ? rmd * -1 : rmd;
 
 	if ((n < 0 ? n * -1 : n) >= 16)
