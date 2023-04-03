@@ -8,12 +8,16 @@
  */
  
 
-void _print_x(unsigned int n, xf array[], int *count)
+void _print_x(long int n, xf array[], int *count)
 {
-	unsigned int div = 16;
+	long int div = 16;
 	int rmd = n == 10 ? 10 : n % div, j;
 
-	if (n >= 16)
+	if(n < 16 && rmd < 0)
+		_putchar('-');
+	rmd = rmd < 0 ? rmd * -1 : rmd;
+
+	if ((n < 0 ? n * -1 : n) >= 16)
 		_print_x(n / 16, array, count);
 	if (rmd >= 10)
 	{
@@ -41,7 +45,7 @@ void _print_x(unsigned int n, xf array[], int *count)
 
 int print_x(va_list *args)
 {
-	unsigned int num = va_arg(*args, unsigned int);
+	long int num = va_arg(*args, long int);
 	int count = 0;
 	xf x_array[6];
 
