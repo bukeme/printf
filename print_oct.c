@@ -6,9 +6,9 @@
  * @count: number of octal digits
  */
 
-void _print_oct(int n, int *count)
+void _print_oct(unsigned int n, int *count)
 {
-	int div = n >= 8 ? 8 : 10;
+	unsigned int div = n >= 8 ? 8 : 10;
 
 	if (n >= 8)
 		_print_oct(n / div, count);
@@ -24,7 +24,7 @@ void _print_oct(int n, int *count)
 
 int print_oct(va_list *args)
 {
-	int num = va_arg(*args, int);
+	unsigned int num = va_arg(*args, unsigned int);
 	int count = 0;
 
 	_print_oct(num, &count);
