@@ -15,8 +15,9 @@ int check_specifier(char format, va_list *args)
 	f i = {'i', print_int}, b = {'b', print_bin};
 	f u = {'u', print_uint}, o = {'o', print_oct};
 	f x = {'x', print_x}, s_cap = {'S', print_s_cap};
+	f x_cap = {'X', print_x};
 	f n = {'\0', 0};
-	f id_array[11];
+	f id_array[12];
 	int j;
 
 	id_array[0] = c;
@@ -29,7 +30,8 @@ int check_specifier(char format, va_list *args)
 	id_array[7] = o;
 	id_array[8] = x;
 	id_array[9] = s_cap;
-	id_array[10] = n;
+	id_array[10] = x_cap;
+	id_array[11] = n;
 
 	for (j = 0; id_array[j].id; j++)
 	{
