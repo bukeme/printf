@@ -8,13 +8,15 @@
 
 int print_p(va_list *args)
 {
-	char *p = (char *) va_arg(*args, void *);
+	void *void_p = va_arg(*args, void *);
+	char p[100];
 	int count = 0;
 
-	while (*p)
+	sprintf(p, "%p", void_p);
+	printf("%s\n", p);
+	while (p[count])
 	{
-		_putchar(*p);
-		p++;
+		_putchar(p[count]);
 		count++;
 	}
 	return (count);
