@@ -13,7 +13,6 @@ int print_p(va_list *args)
 	int count = 0;
 
 	sprintf(p, "%p", void_p);
-	printf("%s\n", p);
 	while (p[count])
 	{
 		_putchar(p[count]);
