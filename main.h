@@ -45,6 +45,7 @@ int print_uint(va_list *);
 int print_oct(va_list *);
 int print_x(va_list *);
 int print_s_cap(va_list *);
+int print_p(va_list *);
 
 #endif
 

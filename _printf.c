@@ -15,7 +15,7 @@ int _printf(const char *format, ...)
 	char *error1 = "Segmentation fault";
 
 	va_start(args, format);
-	if (!p)
+	if (!*p)
 	{
 		while (*error1)
 		{
